@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Calorie calculator</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="calculator_fragment_label">Calculator</string>
-    <string name="result_fragment_label">Result</string>
+    <string name="calculator_fragment">Calculator</string>
+    <string name="result_fragment">Result</string>
+    <string name="help_fragment">Help</string>
     <!-- Calculator -->
     <string name="gender">Gender</string>
     <string name="male">Male</string>
@@ -24,6 +25,5 @@
     <!-- Result -->
     <string name="result">Result</string>
     <string name="calories">Calories</string>
-    <string name="help">help</string>
 
 </resources>
