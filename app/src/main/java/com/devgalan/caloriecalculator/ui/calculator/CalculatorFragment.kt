@@ -33,7 +33,7 @@ class CalculatorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
+        binding.btnCalculate.setOnClickListener {
             findNavController().navigate(R.id.action_CalculatorFragment_to_ResultFragment)
         }
     }

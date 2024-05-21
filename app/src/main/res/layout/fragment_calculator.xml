@@ -4,32 +4,228 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.calculator.CalculatorFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="24dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMale"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/cvFemale"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_male"
+                    app:tint="@color/accent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/male"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/accent" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvFemale"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            app:cardBackgroundColor="@color/secondary"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvMale"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_female"
+                    app:tint="@color/accent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/female"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/accent" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvHeight"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvMale">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/height"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/accent" />
+
+                <TextView
+                    android:id="@+id/tvHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/accent"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    tools:text="170 cm" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/rsHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stepSize="1"
+                    android:valueFrom="120"
+                    android:valueTo="220" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvWeight"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvHeight">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/accent" />
+
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/accent"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    tools:text="75 KG" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/rsWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stepSize="1"
+                    android:valueFrom="30"
+                    android:valueTo="500" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAge"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvWeight">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/age"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/accent" />
+
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/accent"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    tools:text="25 years" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/rsAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stepSize="1"
+                    android:valueFrom="1"
+                    android:valueTo="119" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/button_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next"
-            app:layout_constraintBottom_toTopOf="@id/textview_first"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/accent"
+            android:text="@string/calculate"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/cvAge" />
 
-        <TextView
-            android:id="@+id/textview_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/lorem_ipsum"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_first" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

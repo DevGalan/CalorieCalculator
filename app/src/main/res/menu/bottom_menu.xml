@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/CalculatorFragment"
+        android:icon="@drawable/ic_calculate"
+        android:title="@string/calculate" />
+
+    <item
+        android:id="@+id/ResultFragment"
+        android:icon="@drawable/ic_help"
+        android:title="@string/help" />
+</menu>
