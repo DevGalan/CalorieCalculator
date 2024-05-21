@@ -13,3 +13,7 @@ x
 Happ/src/main/java/com/devgalan/caloriecalculator/CalorieCalculatorApp.kt,0\f\0f67b79b060f306b9ce48f65bd4c19f421efc77d
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+x
+Happ/src/main/java/com/devgalan/caloriecalculator/ui/help/HelpFragment.kt,d\2\d22627903131132f1097aed1c4cf5038ba4e7f6e
+…
+Uapp/src/main/java/com/devgalan/caloriecalculator/ui/calculator/CalculatorViewModel.kt,d\d\dd4a869d4ba4be1efd223490d422e55b32a4fb25
