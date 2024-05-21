@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.devgalan.caloriecalculator.R
 import com.devgalan.caloriecalculator.databinding.FragmentResultBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
+@AndroidEntryPoint
 class ResultFragment : Fragment() {
 
     private var _binding: FragmentResultBinding? = null
