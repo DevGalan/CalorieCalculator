@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculadora de calorías</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="calculator_fragment">Calculadora</string>
+    <string name="result_fragment">Resultado</string>
+    <string name="help_fragment">Ayuda</string>
+    <!-- Calculator -->
+    <string name="gender">Género</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
+    <string name="age">Edad</string>
+    <string name="weight">Peso</string>
+    <string name="height">Altura</string>
+    <string name="activityLevel">Nivel de actividad</string>
+    <string name="sedentary">Sedentario</string>
+    <string name="lightly_active">Ligeramente activo</string>
+    <string name="moderately_active">Moderadamente activo</string>
+    <string name="very_active">Muy activo</string>
+    <string name="extra_active">Extra activo</string>
+    <string name="objetive">Objetivo</string>
+    <string name="lose_weight">Perder peso</string>
+    <string name="lose_weight_fast">Perder peso rápidamente</string>
+    <string name="maintain_weight">Mantener el peso</string>
+    <string name="gain_weight">Ganar peso</string>
+    <string name="gain_weight_fast">Ganar peso rápidamente</string>
+    <string name="calculate">Calcular</string>
+    <!-- Result -->
+    <string name="result">Resultado</string>
+    <string name="calories_result">Para %s tienes que consumir %d calorías al día.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="back">Atrás</string>
+    <string name="years">años</string>
+    <string name="kg">kg</string>
+    <string name="cm">cm</string>
+
+    <!-- AdMob -->
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+</resources>
