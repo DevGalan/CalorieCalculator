@@ -32,4 +32,5 @@
             android:value="@string/admob_app_id" />
     </application>
 
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 </manifest>
