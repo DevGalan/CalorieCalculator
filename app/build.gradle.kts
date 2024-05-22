@@ -51,6 +51,9 @@ dependencies {
     // google admob
     implementation("com.google.android.gms:play-services-ads:20.5.0")
 
+    // Splash screen
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
