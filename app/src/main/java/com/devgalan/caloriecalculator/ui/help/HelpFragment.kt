@@ -5,10 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.devgalan.caloriecalculator.R
-import com.devgalan.caloriecalculator.databinding.FragmentCalculatorBinding
 import com.devgalan.caloriecalculator.databinding.FragmentHelpBinding
-import com.devgalan.caloriecalculator.databinding.FragmentResultBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,5 +21,14 @@ class HelpFragment : Fragment() {
     ): View {
         _binding = FragmentHelpBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initUI()
+    }
+
+    private fun initUI() {
+
     }
 }

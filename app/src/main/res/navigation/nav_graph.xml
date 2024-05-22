@@ -10,24 +10,26 @@
         android:name="com.devgalan.caloriecalculator.ui.calculator.CalculatorFragment"
         android:label="@string/calculator_fragment"
         tools:layout="@layout/fragment_calculator">
-
         <action
-            android:id="@+id/action_CalculatorFragment_to_ResultFragment"
-            app:destination="@id/resultFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/resultFragment"
-        android:name="com.devgalan.caloriecalculator.ui.result.ResultFragment"
-        android:label="@string/result_fragment"
-        tools:layout="@layout/fragment_result">
-
-        <action
-            android:id="@+id/action_ResultFragment_to_CalculatorFragment"
-            app:destination="@id/calculatorFragment" />
+            android:id="@+id/action_calculatorFragment_to_calculationResultActivity"
+            app:destination="@id/calculationResultActivity" />
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
         android:name="com.devgalan.caloriecalculator.ui.help.HelpFragment"
         android:label="@string/help_fragment"
         tools:layout="@layout/fragment_help" />
+    <activity
+        android:id="@+id/calculationResultActivity"
+        android:name="com.devgalan.caloriecalculator.ui.calculationResult.CalculationResultActivity"
+        android:label="CalculationResultActivity" >
+        <argument
+            android:name="result"
+            app:argType="integer"
+            android:defaultValue="2000" />
+        <argument
+            android:name="goal"
+            app:argType="com.devgalan.caloriecalculator.domain.Objetive"
+            android:defaultValue="MAINTAIN_WEIGHT" />
+    </activity>
 </navigation>

@@ -5,9 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.devgalan.caloriecalculator.R
 import com.devgalan.caloriecalculator.databinding.FragmentCalculatorBinding
+import com.devgalan.caloriecalculator.domain.ActivityLevel
+import com.devgalan.caloriecalculator.domain.Calculation
+import com.devgalan.caloriecalculator.domain.CalculationData
+import com.devgalan.caloriecalculator.domain.Objetive
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -16,8 +22,9 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class CalculatorFragment : Fragment() {
 
-    private var _binding: FragmentCalculatorBinding? = null
+    private val calculatorViewModel by viewModels<CalculatorViewModel>()
 
+    private var _binding: FragmentCalculatorBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -33,8 +40,131 @@ class CalculatorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initUI()
+    }
+
+    private fun initUI() {
+
+        reloadGenderButtons()
+
+        binding.rsHeight.setValues(calculatorViewModel.calculationData.height.toFloat())
+        binding.tvHeight.text = calculatorViewModel.calculationData.height.toString() + " " + context?.getString(R.string.cm)
+
+        binding.rsWeight.setValues(calculatorViewModel.calculationData.weight.toFloat())
+        binding.tvWeight.text = calculatorViewModel.calculationData.weight.toString() + " " + context?.getString(R.string.kg)
+
+        binding.rsAge.setValues(calculatorViewModel.calculationData.age.toFloat())
+        binding.tvAge.text = calculatorViewModel.calculationData.age.toInt().toString() + " " + context?.getString(R.string.years)
+
+
+        initEvents()
+    }
+
+    private fun initEvents() {
+        binding.cvMale.setOnClickListener() {
+            calculatorViewModel.calculationData.male = true
+            reloadGenderButtons()
+        }
+
+        binding.cvFemale.setOnClickListener() {
+            calculatorViewModel.calculationData.male = false
+            reloadGenderButtons()
+        }
+
+        binding.fabSubtractHeight.setOnClickListener {
+            calculatorViewModel.calculationData.height -= 0.25f
+            if (calculatorViewModel.calculationData.height < 110f) calculatorViewModel.calculationData.height = 110f
+            binding.rsHeight.setValues(calculatorViewModel.calculationData.height.toFloat())
+            binding.tvHeight.text = calculatorViewModel.calculationData.height.toString() + " " + context?.getString(R.string.cm)
+        }
+
+        binding.fabAddHeight.setOnClickListener {
+            calculatorViewModel.calculationData.height += 0.25f
+            if (calculatorViewModel.calculationData.height > 220) calculatorViewModel.calculationData.height = 220f
+            binding.rsHeight.setValues(calculatorViewModel.calculationData.height.toFloat())
+            binding.tvHeight.text = calculatorViewModel.calculationData.height.toString() + " " + context?.getString(R.string.cm)
+        }
+
+        binding.fabSubtractWeight.setOnClickListener {
+            calculatorViewModel.calculationData.weight -= 0.25f
+            if (calculatorViewModel.calculationData.weight < 30f) calculatorViewModel.calculationData.weight = 30f
+            binding.rsWeight.setValues(calculatorViewModel.calculationData.weight.toFloat())
+            binding.tvWeight.text = calculatorViewModel.calculationData.weight.toString() + " " + context?.getString(R.string.kg)
+        }
+
+        binding.fabAddWeight.setOnClickListener {
+            calculatorViewModel.calculationData.weight += 0.25f
+            if (calculatorViewModel.calculationData.weight > 300) calculatorViewModel.calculationData.weight = 300f
+            binding.rsWeight.setValues(calculatorViewModel.calculationData.weight.toFloat())
+            binding.tvWeight.text = calculatorViewModel.calculationData.weight.toString() + " " + context?.getString(R.string.kg)
+        }
+
+        binding.fabSubtractAge.setOnClickListener {
+            calculatorViewModel.calculationData.age--
+            if (calculatorViewModel.calculationData.age < 1) calculatorViewModel.calculationData.age = 1
+            binding.rsAge.setValues(calculatorViewModel.calculationData.age.toFloat())
+            binding.tvAge.text = calculatorViewModel.calculationData.age.toInt().toString() + " " + context?.getString(R.string.years)
+        }
+
+        binding.fabAddAge.setOnClickListener {
+            calculatorViewModel.calculationData.age++
+            if (calculatorViewModel.calculationData.age > 120) calculatorViewModel.calculationData.age = 120
+            binding.rsAge.setValues(calculatorViewModel.calculationData.age.toFloat())
+            binding.tvAge.text = calculatorViewModel.calculationData.age.toInt().toString() + " " + context?.getString(R.string.years)
+        }
+
+        binding.rsHeight.addOnChangeListener { slider, value, fromUser ->
+            calculatorViewModel.calculationData.height = value
+            binding.tvHeight.text = value.toString() + " " + context?.getString(R.string.cm)
+        }
+
+        binding.rsWeight.addOnChangeListener { slider, value, fromUser ->
+            calculatorViewModel.calculationData.weight = value
+            binding.tvWeight.text = value.toString() + " " + context?.getString(R.string.kg)
+        }
+
+        binding.rsAge.addOnChangeListener { slider, value, fromUser ->
+            calculatorViewModel.calculationData.age = value.toInt().toByte()
+            binding.tvAge.text = value.toInt().toString() + " " + context?.getString(R.string.years)
+        }
+
+        binding.rgActivityLevel.setOnCheckedChangeListener { group, checkedId ->
+            when (checkedId) {
+                R.id.rbSedentary -> calculatorViewModel.calculationData.activityLevel = ActivityLevel.Sedentary
+                R.id.rbLightlyActive -> calculatorViewModel.calculationData.activityLevel = ActivityLevel.LightlyActive
+                R.id.rbModeratelyActive -> calculatorViewModel.calculationData.activityLevel = ActivityLevel.ModeratelyActive
+                R.id.rbVeryActive -> calculatorViewModel.calculationData.activityLevel = ActivityLevel.VeryActive
+                R.id.rbExtraActive -> calculatorViewModel.calculationData.activityLevel = ActivityLevel.ExtraActive
+            }
+        }
+
+        binding.rgObjetive.setOnCheckedChangeListener { group, checkedId ->
+            when (checkedId) {
+                R.id.rbLoseWeightFast -> calculatorViewModel.calculationData.goal = Objetive.LOSE_WEIGHT_FAST
+                R.id.rbLoseWeight -> calculatorViewModel.calculationData.goal = Objetive.LOSE_WEIGHT
+                R.id.rbMaintainWeight -> calculatorViewModel.calculationData.goal = Objetive.MAINTAIN_WEIGHT
+                R.id.rbGainWeight -> calculatorViewModel.calculationData.goal = Objetive.GAIN_WEIGHT
+                R.id.rbGainWeightFast -> calculatorViewModel.calculationData.goal = Objetive.GAIN_WEIGHT_FAST
+            }
+        }
+
         binding.btnCalculate.setOnClickListener {
-            findNavController().navigate(R.id.action_CalculatorFragment_to_ResultFragment)
+            val calculation = Calculation(calculatorViewModel.calculationData)
+            val result = calculation.calculateAndGetResult()
+            findNavController().navigate(
+                CalculatorFragmentDirections.actionCalculatorFragmentToCalculationResultActivity(result, calculatorViewModel.calculationData.goal)
+            )
+        }
+    }
+
+    private fun reloadGenderButtons() {
+        val context = binding.cvFemale.context
+        if (calculatorViewModel.calculationData.male) {
+            binding.cvMale.setCardBackgroundColor(context.getColor(R.color.primary_accent))
+            binding.cvFemale.setCardBackgroundColor(context.getColor(R.color.secondary))
+        } else {
+            binding.cvMale.setCardBackgroundColor(context.getColor(R.color.secondary))
+            binding.cvFemale.setCardBackgroundColor(context.getColor(R.color.primary_accent))
         }
     }
 

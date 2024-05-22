@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="range_slider">
+        <item name="thumbColor">@color/primary_accent</item>
+        <item name="haloColor">@color/primary_accent</item>
+        <item name="trackColorActive">@color/primary_accent</item>
+        <item name="trackColorInactive">@color/white</item>
+    </style>
+</resources>

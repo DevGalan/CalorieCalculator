@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#4CAF50</color>
-    <color name="primary_dark">#388E3C</color>
-    <color name="secondary">#81C784</color>
-    <color name="accent">#FFEB3B</color>
-    <color name="background">#E0E0E0</color>
+    <color name="primary">#1A1A1A</color>
+    <color name="primary_dark">#0B0B0B</color>
+    <color name="secondary">#2E2E2E</color>
+    <color name="primary_accent">#00A676</color>
+    <color name="secondary_accent">#003B73</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#B0B0B0</color>
+
+<!--    <color name="primary">#4CAF50</color>-->
+<!--    <color name="primary_dark">#388E3C</color>-->
+<!--    <color name="secondary">#81C784</color>-->
+<!--    <color name="accent">#FFEB3B</color>-->
+<!--    <color name="background">#E0E0E0</color>-->
+<!--    <color name="black">#FF000000</color>-->
+<!--    <color name="white">#FFFFFFFF</color>-->
 
     <color name="red">#FF0000</color>
 </resources>

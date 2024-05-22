@@ -18,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="130dp"
             android:layout_marginEnd="16dp"
-            app:cardBackgroundColor="@color/primary"
+            app:cardBackgroundColor="@color/primary_accent"
             app:cardCornerRadius="16dp"
             app:layout_constraintEnd_toStartOf="@+id/cvFemale"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:src="@drawable/ic_male"
-                    app:tint="@color/accent" />
+                    app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -42,8 +42,8 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/male"
                     android:textAllCaps="true"
-                    android:textStyle="bold"
-                    android:textColor="@color/accent" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -68,16 +68,16 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:src="@drawable/ic_female"
-                    app:tint="@color/accent" />
+                    app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/female"
-                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/accent" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginTop="24dp"
-            app:cardBackgroundColor="@color/primary"
+            app:cardBackgroundColor="@color/secondary"
             app:cardCornerRadius="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cvMale">
@@ -103,26 +103,65 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/height"
-                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/accent" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvHeight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/accent"
+                    android:textColor="@color/white"
                     android:textSize="35sp"
                     android:textStyle="bold"
                     tools:text="170 cm" />
 
-                <com.google.android.material.slider.RangeSlider
-                    android:id="@+id/rsHeight"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:stepSize="1"
-                    android:valueFrom="120"
-                    android:valueTo="220" />
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabSubtractHeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_accent"
+                        android:src="@drawable/ic_remove"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/rsHeight"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/rsHeight"
+                        style="@style/range_slider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:stepSize=".25"
+                        android:valueFrom="110"
+                        android:valueTo="220"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/fabAddHeight"
+                        app:layout_constraintStart_toEndOf="@+id/fabSubtractHeight"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabAddHeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_accent"
+                        android:src="@drawable/ic_add"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/rsHeight"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
 
 
@@ -133,7 +172,7 @@
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginTop="24dp"
-            app:cardBackgroundColor="@color/primary"
+            app:cardBackgroundColor="@color/secondary"
             app:cardCornerRadius="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cvHeight">
@@ -148,35 +187,76 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/weight"
-                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/accent" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvWeight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/accent"
+                    android:textColor="@color/white"
                     android:textSize="35sp"
                     android:textStyle="bold"
                     tools:text="75 KG" />
 
-                <com.google.android.material.slider.RangeSlider
-                    android:id="@+id/rsWeight"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:stepSize="1"
-                    android:valueFrom="30"
-                    android:valueTo="500" />
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabSubtractWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_accent"
+                        android:src="@drawable/ic_remove"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/rsWeight"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/rsWeight"
+                        style="@style/range_slider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:stepSize=".25"
+                        android:valueFrom="30"
+                        android:valueTo="300"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/fabAddWeight"
+                        app:layout_constraintStart_toEndOf="@+id/fabSubtractWeight"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabAddWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_accent"
+                        android:src="@drawable/ic_add"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/rsWeight"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cvAge"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginTop="24dp"
-            app:cardBackgroundColor="@color/primary"
+            app:cardBackgroundColor="@color/secondary"
             app:cardCornerRadius="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cvWeight">
@@ -191,26 +271,224 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/age"
-                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/accent" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvAge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/accent"
+                    android:textColor="@color/white"
                     android:textSize="35sp"
                     android:textStyle="bold"
                     tools:text="25 years" />
 
-                <com.google.android.material.slider.RangeSlider
-                    android:id="@+id/rsAge"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:stepSize="1"
-                    android:valueFrom="1"
-                    android:valueTo="119" />
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabSubtractAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_accent"
+                        android:src="@drawable/ic_remove"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/rsAge"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/rsAge"
+                        style="@style/range_slider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:stepSize="1"
+                        android:valueFrom="1"
+                        android:valueTo="120"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/fabAddAge"
+                        app:layout_constraintStart_toEndOf="@+id/fabSubtractAge"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabAddAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_accent"
+                        android:src="@drawable/ic_add"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/rsAge"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/secondary"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/cvObjetive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvAge">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="@string/activityLevel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgActivityLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbSedentary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:text="@string/sedentary"
+                        android:textColor="@color/radio_button_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rbLightlyActive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:text="@string/lightly_active"
+                        android:textColor="@color/radio_button_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rbModeratelyActive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:checked="true"
+                        android:text="@string/moderately_active"
+                        android:textColor="@color/radio_button_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rbVeryActive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:color="@color/primary_accent"
+                        android:text="@string/very_active"
+                        android:textColor="@color/radio_button_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rbExtraActive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:text="@string/extra_active"
+                        android:textColor="@color/radio_button_selector" />
+                </RadioGroup>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvObjetive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/secondary"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cvActivity"
+            app:layout_constraintTop_toBottomOf="@+id/cvAge">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="@string/objetive"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgObjetive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbLoseWeightFast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:text="@string/lose_weight_fast"
+                        android:textColor="@color/radio_button_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rbLoseWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:text="@string/lose_weight"
+                        android:textColor="@color/radio_button_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rbMaintainWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:checked="true"
+                        android:text="@string/maintain_weight"
+                        android:textColor="@color/radio_button_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rbGainWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:color="@color/primary_accent"
+                        android:text="@string/gain_weight"
+                        android:textColor="@color/radio_button_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rbGainWeightFast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:text="@string/gain_weight_fast"
+                        android:textColor="@color/radio_button_selector" />
+                </RadioGroup>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -220,12 +498,12 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="24dp"
-            android:backgroundTint="@color/accent"
+            android:backgroundTint="@color/primary_accent"
             android:text="@string/calculate"
-            android:textColor="@color/primary"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/cvAge" />
+            app:layout_constraintTop_toBottomOf="@+id/cvObjetive" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
