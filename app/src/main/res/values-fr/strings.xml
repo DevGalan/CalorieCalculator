@@ -12,7 +12,7 @@
     <string name="age">Âge</string>
     <string name="weight">Poids</string>
     <string name="height">Taille</string>
-    <string name="activityLevel">Niveau d'activité</string>
+    <string name="activityLevel">Niveau d\'activité</string>
     <string name="sedentary">Sédentaire</string>
     <string name="lightly_active">Légèrement actif</string>
     <string name="moderately_active">Modérément actif</string>
