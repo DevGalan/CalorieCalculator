@@ -5,8 +5,8 @@
         android:icon="@drawable/ic_calculate"
         android:title="@string/calculator_fragment" />
 
-    <item
-        android:id="@+id/helpFragment"
-        android:icon="@drawable/ic_help"
-        android:title="@string/help_fragment" />
+<!--    <item-->
+<!--        android:id="@+id/helpFragment"-->
+<!--        android:icon="@drawable/ic_help"-->
+<!--        android:title="@string/help_fragment" />-->
 </menu>
