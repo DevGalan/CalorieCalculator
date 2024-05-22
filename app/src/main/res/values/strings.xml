@@ -35,4 +35,8 @@
     <string name="kg">kg</string>
     <string name="cm">cm</string>
 
+    <!-- AdMob -->
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+
 </resources>

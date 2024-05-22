@@ -48,6 +48,9 @@ dependencies {
     implementation(libs.androidx.activity)
     kapt("com.google.dagger:hilt-compiler:2.48")
 
+    // google admob
+    implementation("com.google.android.gms:play-services-ads:20.5.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

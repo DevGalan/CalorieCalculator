@@ -38,5 +38,9 @@ class CalculationResultActivity : AppCompatActivity() {
                 Objetive.GAIN_WEIGHT -> context.getString(R.string.gain_weight)
                 Objetive.GAIN_WEIGHT_FAST -> context.getString(R.string.gain_weight_fast)
             }, args.result)
+
+        binding.backButton.setOnClickListener {
+            finish()
+        }
     }
 }
