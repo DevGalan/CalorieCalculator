@@ -250,6 +250,6 @@ class CalculatorFragment : Fragment() {
     }
 
     private fun showInterstitial() {
-        interstitial?.show(requireActivity())
+//        interstitial?.show(requireActivity())
     }
 }
