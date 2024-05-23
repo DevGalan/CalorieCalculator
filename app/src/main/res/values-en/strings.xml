@@ -68,8 +68,4 @@
     <string name="help_body_stress_bmr_effect">Stress can affect your BMR. Some research suggests that chronic stress can decrease BMR, although more research is needed to fully understand this relationship.</string>
     <string name="help_body_climate_bmr_effect">Climate can affect your BMR. For example, your body burns more calories to stay warm in cold climates, which can increase your BMR.</string>
 
-    <!-- AdMob -->
-    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
-
 </resources>

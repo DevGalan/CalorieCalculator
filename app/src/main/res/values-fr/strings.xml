@@ -67,8 +67,4 @@
     <string name="help_body_exercise_bmr_effect">L\'exercice, en particulier l\'entraînement en force, peut augmenter votre BMR en augmentant votre masse musculaire.</string>
     <string name="help_body_stress_bmr_effect">Le stress peut affecter votre BMR. Certaines recherches suggèrent que le stress chronique peut diminuer le BMR, bien que davantage de recherches soient nécessaires pour comprendre pleinement cette relation.</string>
     <string name="help_body_climate_bmr_effect">Le climat peut affecter votre BMR. Par exemple, votre corps brûle plus de calories pour rester au chaud dans les climats froids, ce qui peut augmenter votre BMR.</string>
-
-    <!-- AdMob -->
-    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
 </resources>
