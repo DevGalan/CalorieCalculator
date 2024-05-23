@@ -37,13 +37,11 @@
                     app:tint="@color/white" />
 
                 <TextView
+                    style="@style/ComponentTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/male"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:text="@string/male" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -71,13 +69,11 @@
                     app:tint="@color/white" />
 
                 <TextView
+                    style="@style/ComponentTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/female"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:text="@string/female"/>
 
             </LinearLayout>
 
@@ -100,12 +96,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/ComponentTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/height"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:text="@string/height" />
 
                 <TextView
                     android:id="@+id/tvHeight"
@@ -184,12 +178,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/ComponentTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/weight"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:text="@string/weight" />
 
                 <TextView
                     android:id="@+id/tvWeight"
@@ -268,12 +260,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/ComponentTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/age"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:text="@string/age"/>
 
                 <TextView
                     android:id="@+id/tvAge"
@@ -354,13 +344,11 @@
                 android:padding="8dp">
 
                 <TextView
+                    style="@style/ComponentTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="4dp"
-                    android:text="@string/activityLevel"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:text="@string/activityLevel"/>
 
                 <RadioGroup
                     android:id="@+id/rgActivityLevel"
@@ -372,6 +360,7 @@
                         android:id="@+id/rbSedentary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        style="@style/RadioButtonTitle"
                         android:buttonTint="@color/radio_button_selector"
                         android:text="@string/sedentary"
                         android:textColor="@color/radio_button_selector" />
@@ -379,6 +368,7 @@
                     <RadioButton
                         android:id="@+id/rbLightlyActive"
                         android:layout_width="match_parent"
+                        style="@style/RadioButtonTitle"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/radio_button_selector"
                         android:text="@string/lightly_active"
@@ -388,6 +378,7 @@
                         android:id="@+id/rbModeratelyActive"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        style="@style/RadioButtonTitle"
                         android:buttonTint="@color/radio_button_selector"
                         android:checked="true"
                         android:text="@string/moderately_active"
@@ -399,6 +390,7 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/radio_button_selector"
                         android:color="@color/primary_accent"
+                        style="@style/RadioButtonTitle"
                         android:text="@string/very_active"
                         android:textColor="@color/radio_button_selector" />
 
@@ -408,6 +400,7 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/radio_button_selector"
                         android:text="@string/extra_active"
+                        style="@style/RadioButtonTitle"
                         android:textColor="@color/radio_button_selector" />
                 </RadioGroup>
             </LinearLayout>
@@ -417,35 +410,35 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cvObjetive"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="24dp"
             app:cardBackgroundColor="@color/secondary"
             app:cardCornerRadius="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cvActivity"
-            app:layout_constraintTop_toBottomOf="@+id/cvAge">
+            app:layout_constraintTop_toBottomOf="@+id/cvAge"
+            app:layout_constraintBottom_toBottomOf="@id/cvActivity">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="8dp">
 
                 <TextView
+                    style="@style/ComponentTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="4dp"
-                    android:text="@string/objetive"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:text="@string/objetive" />
 
                 <RadioGroup
                     android:id="@+id/rgObjetive"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="bottom">
 
                     <RadioButton
                         android:id="@+id/rbLoseWeightFast"
@@ -453,6 +446,7 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/radio_button_selector"
                         android:text="@string/lose_weight_fast"
+                        style="@style/RadioButtonTitle"
                         android:textColor="@color/radio_button_selector" />
 
                     <RadioButton
@@ -461,6 +455,7 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/radio_button_selector"
                         android:text="@string/lose_weight"
+                        style="@style/RadioButtonTitle"
                         android:textColor="@color/radio_button_selector" />
 
                     <RadioButton
@@ -470,6 +465,7 @@
                         android:buttonTint="@color/radio_button_selector"
                         android:checked="true"
                         android:text="@string/maintain_weight"
+                        style="@style/RadioButtonTitle"
                         android:textColor="@color/radio_button_selector" />
 
                     <RadioButton
@@ -479,6 +475,7 @@
                         android:buttonTint="@color/radio_button_selector"
                         android:color="@color/primary_accent"
                         android:text="@string/gain_weight"
+                        style="@style/RadioButtonTitle"
                         android:textColor="@color/radio_button_selector" />
 
                     <RadioButton
@@ -487,6 +484,7 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/radio_button_selector"
                         android:text="@string/gain_weight_fast"
+                        style="@style/RadioButtonTitle"
                         android:textColor="@color/radio_button_selector" />
                 </RadioGroup>
             </LinearLayout>

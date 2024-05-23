@@ -29,12 +29,44 @@
     <string name="result">Ergebnis</string>
     <string name="calories_result">Um %s zu erreichen, müssen Sie %d Kalorien pro Tag zu sich nehmen.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
     <string name="back">Zurück</string>
     <string name="years">Jahre</string>
     <string name="kg">kg</string>
     <string name="cm">cm</string>
+
+    <!-- Headers -->
+    <string name="help_header_calorie">Was ist eine Kalorie?</string>
+    <string name="help_header_bmr_calculation">Wie berechnen wir den BMR?</string>
+    <string name="help_header_healthy_weight_gain">Wie kann ich gesund an Gewicht zunehmen?</string>
+    <string name="help_header_maintain_weight">Wie kann ich mein aktuelles Gewicht halten?</string>
+    <string name="help_header_healthy_weight_loss">Wie kann ich gesund abnehmen?</string>
+    <string name="help_header_bmr">Was ist der BMR?</string>
+    <string name="help_header_bmr_weight_effect">Wie beeinflusst der BMR mein Gewicht?</string>
+    <string name="help_header_increase_bmr">Wie kann ich meinen BMR erhöhen?</string>
+    <string name="help_header_age_bmr_effect">Wie beeinflusst das Alter den BMR?</string>
+    <string name="help_header_gender_bmr_effect">Wie beeinflusst das Geschlecht den BMR?</string>
+    <string name="help_header_muscle_mass_bmr_effect">Wie beeinflusst die Muskelmasse den BMR?</string>
+    <string name="help_header_diet_bmr_effect">Wie beeinflusst die Ernährung den BMR?</string>
+    <string name="help_header_exercise_bmr_effect">Wie beeinflusst die Bewegung den BMR?</string>
+    <string name="help_header_stress_bmr_effect">Wie beeinflusst Stress den BMR?</string>
+    <string name="help_header_climate_bmr_effect">Wie beeinflusst das Klima den BMR?</string>
+
+    <!-- Bodies -->
+    <string name="help_body_calorie">Eine Kalorie ist eine Energieeinheit. In der Ernährung beziehen sich Kalorien auf die Energie, die Menschen aus der Nahrung und den Getränken, die sie konsumieren, und die Energie, die sie bei körperlicher Aktivität verwenden, erhalten.</string>
+    <string name="help_body_bmr_calculation">Wir verwenden die aktuellste Harris-Benedict-Gleichung, eine Methode zur Schätzung der basalen Stoffwechselrate (BMR) eines Individuums und des täglichen Kilokalorienbedarfs. Der geschätzte BMR-Wert wird mit einer Zahl multipliziert, die dem Aktivitätsniveau des Individuums entspricht.</string>
+    <string name="help_body_bmr">BMR, oder Basal Metabolic Rate, ist die Menge an Energie, die dein Körper benötigt, um grundlegende Funktionen wie Atmen und Aufrechterhaltung der Körpertemperatur im Ruhezustand durchzuführen.</string>
+    <string name="help_body_healthy_weight_gain">Gesundes Zunehmen beinhaltet eine allmähliche Erhöhung der Kalorienzufuhr und den Verzehr von nährstoffreichen Lebensmitteln. Es ist wichtig, dies mit einem Widerstandstraining zu kombinieren, um sicherzustellen, dass das zugenommene Gewicht in Form von Muskeln und nicht von Fett ist.</string>
+    <string name="help_body_maintain_weight">Das aktuelle Gewicht zu halten, beinhaltet das Ausbalancieren der aufgenommenen Kalorien mit den verbrannten Kalorien. Dies bedeutet, eine ausgewogene Ernährung zu konsumieren und ein regelmäßiges Maß an körperlicher Aktivität aufrechtzuerhalten.</string>
+    <string name="help_body_healthy_weight_loss">Gesundes Abnehmen beinhaltet eine allmähliche Reduzierung der Kalorienzufuhr. Es ist auch wichtig, eine ausgewogene Ernährung zu konsumieren und die körperliche Aktivität zu erhöhen.</string>
+    <string name="help_body_bmr_weight_effect">Dein BMR bestimmt die Menge an Kalorien, die dein Körper benötigt, um im Ruhezustand zu funktionieren. Wenn du mehr Kalorien zu dir nimmst, als dein Körper verbrennt, einschließlich der Kalorien, die durch deinen BMR verbrannt werden, wirst du an Gewicht zunehmen. Wenn du weniger Kalorien zu dir nimmst, als dein Körper verbrennt, wirst du abnehmen.</string>
+    <string name="help_body_increase_bmr">Du kannst deinen BMR erhöhen, indem du deine Muskelmasse erhöhst. Muskeln verbrennen mehr Kalorien als Fett, sogar im Ruhezustand, so dass mehr Muskelmasse deinen BMR erhöhen kann. Auch 30/60 Minuten Spaziergänge pro Tag helfen, deinen BMR zu erhöhen.</string>
+    <string name="help_body_age_bmr_effect">Mit zunehmendem Alter sinkt dein BMR in der Regel. Dies ist teilweise auf den Verlust von Muskelmasse zurückzuführen, der mit dem Alter einhergeht.</string>
+    <string name="help_body_gender_bmr_effect">Im Allgemeinen haben Männer tendenziell einen höheren BMR als Frauen, weil sie mehr Muskelmasse und weniger Körperfett haben.</string>
+    <string name="help_body_muscle_mass_bmr_effect">Muskelmasse verbrennt mehr Kalorien als Fett, sogar im Ruhezustand. Daher haben Menschen mit mehr Muskelmasse einen höheren BMR.</string>
+    <string name="help_body_diet_bmr_effect">Die Ernährung kann deinen BMR beeinflussen. Wenn du zum Beispiel sehr wenige Kalorien zu dir nimmst, kann dein Körper in den "Hungermodus" gehen, was deinen BMR zur Energieerhaltung reduzieren kann.</string>
+    <string name="help_body_exercise_bmr_effect">Bewegung, insbesondere Krafttraining, kann deinen BMR erhöhen, indem sie deine Muskelmasse erhöht.</string>
+    <string name="help_body_stress_bmr_effect">Stress kann deinen BMR beeinflussen. Einige Forschungen legen nahe, dass chronischer Stress den BMR senken kann, obwohl mehr Forschung benötigt wird, um diese Beziehung vollständig zu verstehen.</string>
+    <string name="help_body_climate_bmr_effect">Das Klima kann deinen BMR beeinflussen. Zum Beispiel verbrennt dein Körper in kalten Klimazonen mehr Kalorien, um warm zu bleiben, was deinen BMR erhöhen kann.</string>
 
     <!-- AdMob -->
     <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>

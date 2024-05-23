@@ -39,11 +39,39 @@ class HelpFragment : Fragment() {
     }
 
     private fun initData() {
-        headers = listOf("What is a calorie?", "How to calculate BMR?", "How to calculate TDEE?")
+        headers = listOf(
+            getString(R.string.help_header_calorie),
+            getString(R.string.help_header_bmr_calculation),
+            getString(R.string.help_header_healthy_weight_gain),
+            getString(R.string.help_header_maintain_weight),
+            getString(R.string.help_header_healthy_weight_loss),
+            getString(R.string.help_header_bmr),
+            getString(R.string.help_header_bmr_weight_effect),
+            getString(R.string.help_header_increase_bmr),
+            getString(R.string.help_header_age_bmr_effect),
+            getString(R.string.help_header_gender_bmr_effect),
+            getString(R.string.help_header_muscle_mass_bmr_effect),
+            getString(R.string.help_header_diet_bmr_effect),
+            getString(R.string.help_header_exercise_bmr_effect),
+            getString(R.string.help_header_stress_bmr_effect),
+            getString(R.string.help_header_climate_bmr_effect)
+        )
         bodies = HashMap()
-        bodies["What is a calorie?"] = listOf("A calorie is a unit of energy. In nutrition, calories refer to the energy people get from the food and drink they consume, and the energy they use in physical activity.")
-        bodies["How to calculate BMR?"] = listOf("The Harris-Benedict equation is a method used to estimate an individual's basal metabolic rate (BMR) and daily kilocalorie requirements. The estimated BMR value is multiplied by a number that corresponds to the individual's activity level.")
-        bodies["How to calculate TDEE?"] = listOf("Total Daily Energy Expenditure (TDEE) is an estimate of how many calories you burn per day when exercise is taken into account. It is calculated by first figuring out your Basal Metabolic Rate, then multiplying that value by an activity multiplier.")
+        bodies[getString(R.string.help_header_calorie)] = listOf(getString(R.string.help_body_calorie))
+        bodies[getString(R.string.help_header_bmr_calculation)] = listOf(getString(R.string.help_body_bmr_calculation))
+        bodies[getString(R.string.help_header_bmr)] = listOf(getString(R.string.help_body_bmr))
+        bodies[getString(R.string.help_header_healthy_weight_gain)] = listOf(getString(R.string.help_body_healthy_weight_gain))
+        bodies[getString(R.string.help_header_maintain_weight)] = listOf(getString(R.string.help_body_maintain_weight))
+        bodies[getString(R.string.help_header_healthy_weight_loss)] = listOf(getString(R.string.help_body_healthy_weight_loss))
+        bodies[getString(R.string.help_header_bmr_weight_effect)] = listOf(getString(R.string.help_body_bmr_weight_effect))
+        bodies[getString(R.string.help_header_increase_bmr)] = listOf(getString(R.string.help_body_increase_bmr))
+        bodies[getString(R.string.help_header_age_bmr_effect)] = listOf(getString(R.string.help_body_age_bmr_effect))
+        bodies[getString(R.string.help_header_gender_bmr_effect)] = listOf(getString(R.string.help_body_gender_bmr_effect))
+        bodies[getString(R.string.help_header_muscle_mass_bmr_effect)] = listOf(getString(R.string.help_body_muscle_mass_bmr_effect))
+        bodies[getString(R.string.help_header_diet_bmr_effect)] = listOf(getString(R.string.help_body_diet_bmr_effect))
+        bodies[getString(R.string.help_header_exercise_bmr_effect)] = listOf(getString(R.string.help_body_exercise_bmr_effect))
+        bodies[getString(R.string.help_header_stress_bmr_effect)] = listOf(getString(R.string.help_body_stress_bmr_effect))
+        bodies[getString(R.string.help_header_climate_bmr_effect)] = listOf(getString(R.string.help_body_climate_bmr_effect))
     }
 
     private fun initUI() {

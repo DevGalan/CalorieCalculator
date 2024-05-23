@@ -28,12 +28,44 @@
     <string name="result">Result</string>
     <string name="calories_result">To %s you have to consume %d calories</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="back">Back</string>
     <string name="years">years</string>
     <string name="kg">kg</string>
     <string name="cm">cm</string>
+
+    <!-- Headers -->
+    <string name="help_header_calorie">What is a calorie?</string>
+    <string name="help_header_bmr_calculation">How do we calculate BMR?</string>
+    <string name="help_header_healthy_weight_gain">How can I gain weight healthily?</string>
+    <string name="help_header_maintain_weight">How can I maintain my current weight?</string>
+    <string name="help_header_healthy_weight_loss">How can I lose weight healthily?</string>
+    <string name="help_header_bmr">What is BMR?</string>
+    <string name="help_header_bmr_weight_effect">How does BMR affect my weight?</string>
+    <string name="help_header_increase_bmr">How can I increase my BMR?</string>
+    <string name="help_header_age_bmr_effect">How does age affect BMR?</string>
+    <string name="help_header_gender_bmr_effect">How does gender affect BMR?</string>
+    <string name="help_header_muscle_mass_bmr_effect">How does muscle mass affect BMR?</string>
+    <string name="help_header_diet_bmr_effect">How does diet affect BMR?</string>
+    <string name="help_header_exercise_bmr_effect">How does exercise affect BMR?</string>
+    <string name="help_header_stress_bmr_effect">How does stress affect BMR?</string>
+    <string name="help_header_climate_bmr_effect">How does climate affect BMR?</string>
+
+    <!-- Bodies -->
+    <string name="help_body_calorie">A calorie is a unit of energy. In nutrition, calories refer to the energy people get from the food and drink they consume, and the energy they use in physical activity.</string>
+    <string name="help_body_bmr_calculation">We use the most up-to-date Harris-Benedict equation, a method used to estimate an individual\'s basal metabolic rate (BMR) and daily kilocalorie requirements. The estimated BMR value is multiplied by a number that corresponds to the individual\'s activity level.</string>
+    <string name="help_body_bmr">BMR, or Basal Metabolic Rate, is the amount of energy your body needs to perform basic functions, such as breathing and maintaining body temperature, while you are at rest.</string>
+    <string name="help_body_healthy_weight_gain">Gaining weight healthily involves gradually increasing calorie intake and consuming nutrient-rich foods. It is important to combine this with a resistance exercise program to ensure that the weight gained is in the form of muscle and not fat.</string>
+    <string name="help_body_maintain_weight">Maintaining current weight involves balancing calorie intake with calories burned. This means consuming a balanced diet and maintaining a regular level of physical activity.</string>
+    <string name="help_body_healthy_weight_loss">Losing weight healthily involves gradually reducing calorie intake. It is also important to consume a balanced diet and increase physical activity.</string>
+    <string name="help_body_bmr_weight_effect">Your BMR determines the amount of calories your body needs to keep functioning at rest. If you consume more calories than your body burns, including the calories burned by your BMR, you will gain weight. If you consume fewer calories than your body burns, you will lose weight.</string>
+    <string name="help_body_increase_bmr">You can increase your BMR by increasing your muscle mass. Muscles burn more calories than fat, even at rest, so having more muscle mass can increase your BMR. Also, taking 30/60 minute walks a day will help increase your BMR.</string>
+    <string name="help_body_age_bmr_effect">As you age, your BMR generally decreases. This is partly due to the loss of muscle mass that occurs with age.</string>
+    <string name="help_body_gender_bmr_effect">In general, men tend to have a higher BMR than women because they have more muscle mass and less body fat.</string>
+    <string name="help_body_muscle_mass_bmr_effect">Muscle mass burns more calories than fat, even at rest. Therefore, people with more muscle mass have a higher BMR.</string>
+    <string name="help_body_diet_bmr_effect">Diet can affect your BMR. For example, if you consume very few calories, your body may go into \'starvation mode\', which can reduce your BMR to conserve energy.</string>
+    <string name="help_body_exercise_bmr_effect">Exercise, especially strength training, can increase your BMR by increasing your muscle mass.</string>
+    <string name="help_body_stress_bmr_effect">Stress can affect your BMR. Some research suggests that chronic stress can decrease BMR, although more research is needed to fully understand this relationship.</string>
+    <string name="help_body_climate_bmr_effect">Climate can affect your BMR. For example, your body burns more calories to stay warm in cold climates, which can increase your BMR.</string>
 
     <!-- AdMob -->
     <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>

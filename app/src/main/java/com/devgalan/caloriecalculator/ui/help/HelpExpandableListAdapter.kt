@@ -62,7 +62,11 @@ class HelpExpandableListAdapter(
         }
         val listTitleTextView = convertView!!.findViewById<TextView>(R.id.tvHelpGroup)
         listTitleTextView.setTypeface(null, Typeface.BOLD)
-        listTitleTextView.text = listTitle
+        listTitleTextView.text = buildString {
+            append((listPosition + 1))
+            append(". ")
+            append(listTitle)
+        }
 
         if (isExpanded) {
             convertView.setBackgroundResource(R.drawable.rounded_top_border)
