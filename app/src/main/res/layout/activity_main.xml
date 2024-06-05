@@ -9,20 +9,20 @@
 
     <FrameLayout
         android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:background="@color/primary_dark"
-        android:layout_height="?attr/actionBarSize"
         style="@style/Toolbar"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_dark"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            style="@style/Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            style="@style/Title"
-            android:text="@string/app_name"/>
+            android:text="@string/app_name" />
 
     </FrameLayout>
 
@@ -42,14 +42,14 @@
         android:id="@+id/bottomNavView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/primary_dark"
-        app:itemIconTint="@color/bottom_nav_selector"
-        app:itemTextColor="@color/bottom_nav_selector"
         app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@color/bottom_nav_selector"
         app:itemRippleColor="@color/primary_accent"
-        app:menu="@menu/bottom_menu"/>
+        app:itemTextColor="@color/bottom_nav_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
